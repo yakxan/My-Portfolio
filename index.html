@@ -12,7 +12,6 @@
         
         body { font-family: 'Inter', system-ui, sans-serif; }
         .heading { font-family: 'Space Grotesk', sans-serif; }
-        .hero-text { font-size: 4.5rem; line-height: 1.05; }
         
         .project-card { transition: all 0.4s ease; }
         .project-card:hover { transform: translateY(-8px); }
@@ -20,48 +19,52 @@
 </head>
 <body class="bg-black text-white overflow-x-hidden">
 
+    <!-- NAVBAR -->
     <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <span class="text-3xl font-bold tracking-tighter heading">YACHSANUL FAIZIN</span>
-                <span class="text-emerald-400 text-3xl leading-none">●</span>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 md:py-5 flex items-center justify-between">
+            <div class="flex items-center gap-2 md:gap-3">
+                <span class="text-xl sm:text-2xl md:text-3xl font-bold tracking-tighter heading">YACHSANUL FAIZIN</span>
+                <span class="text-emerald-400 text-xl md:text-3xl leading-none">●</span>
             </div>
             
-            <div class="hidden md:flex items-center gap-10 text-sm font-medium">
+            <div class="hidden lg:flex items-center gap-10 text-sm font-medium">
                 <a href="#home" class="hover:text-emerald-400 transition-transform active:scale-90 inline-block">HOME</a>
                 <a href="#work" class="hover:text-emerald-400 transition-transform active:scale-90 inline-block">WORK</a>
                 <a href="#skills" class="hover:text-emerald-400 transition-transform active:scale-90 inline-block">SKILLS</a>
             </div>
             
-            <a href="#contact" class="px-6 py-3 border border-white/80 hover:border-emerald-400 hover:text-emerald-400 transition-all active:scale-95 rounded-full text-sm font-semibold tracking-wider">
+            <a href="#contact" class="px-4 py-2 md:px-6 md:py-3 border border-white/80 hover:border-emerald-400 hover:text-emerald-400 transition-all active:scale-95 rounded-full text-xs md:text-sm font-semibold tracking-wider whitespace-nowrap">
                 MULAI PROYEK
             </a>
         </div>
     </nav>
 
-    <section id="home" class="min-h-screen flex items-center pt-20 relative">
+    <!-- HERO -->
+    <section id="home" class="min-h-screen flex items-center pt-24 pb-12 md:pt-20 md:pb-0 relative">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-8">
-                <div class="inline-flex items-center gap-2 text-emerald-400 text-sm tracking-widest">
+            <div class="space-y-6 md:space-y-8 order-2 md:order-1">
+                <div class="inline-flex items-center gap-2 text-emerald-400 text-xs md:text-sm tracking-widest mt-4 md:mt-0">
                     <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
                     KENDARI, SULAWESI TENGGARA
                 </div>
                 
-                <h1 class="heading hero-text leading-none">
+                <!-- Responsif ukuran teks Hero -->
+                <h1 class="heading text-5xl sm:text-6xl lg:text-[4.5rem] leading-[1.1]">
                     Mengubah Ide<br>Menjadi<br>Realitas<span class="text-emerald-400">.</span>
                 </h1>
                 
-                <p class="text-xl text-gray-400 max-w-md">
+                <p class="text-lg md:text-xl text-gray-400 max-w-md">
                     Pengembang Software, Desainer, dan Content Creator
                 </p>
                 
-                <div class="flex items-center gap-4">
-                    <a href="#contact" class="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-emerald-400 transition-all active:scale-95 inline-block">MULAI KOLABORASI</a>
-                    <a href="#work" class="px-8 py-4 border border-white/50 hover:border-white font-medium rounded-full transition-all active:scale-95 inline-block">LIHAT PROYEK</a>
+                <!-- Responsif tombol (Vertical di HP, Horizontal di PC) -->
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 md:gap-4">
+                    <a href="#contact" class="text-center px-6 py-4 bg-white text-black font-semibold rounded-full hover:bg-emerald-400 transition-all active:scale-95 text-sm md:text-base">MULAI KOLABORASI</a>
+                    <a href="#work" class="text-center px-6 py-4 border border-white/50 hover:border-white font-medium rounded-full transition-all active:scale-95 text-sm md:text-base">LIHAT PROYEK</a>
                 </div>
             </div>
 
-            <div class="relative">
+            <div class="relative order-1 md:order-2 mt-8 md:mt-0">
                 <img src="src/myphoto.jpg" 
                      alt="Yachsanul Faizin" 
                      class="w-full rounded-3xl border border-white/10 shadow-2xl">
@@ -69,113 +72,117 @@
         </div>
     </section>
 
-    <section id="work" class="py-24 bg-zinc-950 border-t border-white/10">
+    <!-- WORK -->
+    <section id="work" class="py-20 md:py-24 bg-zinc-950 border-t border-white/10">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="flex justify-between items-end mb-12">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 md:mb-12 gap-4">
                 <div>
-                    <div class="text-emerald-400 text-sm tracking-widest">01 / SELECTED WORK</div>
-                    <h2 class="heading text-6xl">Proyek-proyek <br>terbaru.</h2>
+                    <div class="text-emerald-400 text-xs md:text-sm tracking-widest mb-2">01 / SELECTED WORK</div>
+                    <!-- Responsif judul -->
+                    <h2 class="heading text-4xl md:text-6xl">Proyek-proyek <br>terbaru.</h2>
                 </div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="grid sm:grid-cols-2 gap-6 md:gap-8">
                 <div class="project-card bg-zinc-900 rounded-3xl overflow-hidden">
-                    <img src="src/WhatsApp%20Image%202026-07-09%20at%2016.33.34.jpeg" class="w-full h-80 object-cover" alt="">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold">Sistem Monitoring Jaringan</h3>
-                        <p class="text-gray-400">HTML, CSS, JS, PHP, SQL</p>
+                    <img src="src/WhatsApp%20Image%202026-07-09%20at%2016.33.34.jpeg" class="w-full h-64 md:h-80 object-cover" alt="">
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xl md:text-2xl font-semibold">Sistem Monitoring Jaringan</h3>
+                        <p class="text-sm md:text-base text-gray-400 mt-1">HTML, CSS, JS, PHP, SQL</p>
                     </div>
                 </div>
 
                 <div class="project-card bg-zinc-900 rounded-3xl overflow-hidden">
-                    <img src="src/IMG_20260423_084846.jpg" class="w-full h-80 object-cover" alt="">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold">Konten HUT Sultra ke-62</h3>
-                        <p class="text-gray-400">Produksi konten hari perayaan</p>
+                    <img src="src/IMG_20260423_084846.jpg" class="w-full h-64 md:h-80 object-cover" alt="">
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xl md:text-2xl font-semibold">Konten HUT Sultra ke-62</h3>
+                        <p class="text-sm md:text-base text-gray-400 mt-1">Produksi konten hari perayaan</p>
                     </div>
                 </div>
 
                 <div class="project-card bg-zinc-900 rounded-3xl overflow-hidden">
-                    <img src="src/kendari_da7b9e2a97c511865421defb7bfad93a-720x405.png" class="w-full h-80 object-cover" alt="">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold">WiFi Corner Publik</h3>
-                        <p class="text-gray-400">Konten promosi WiFi publik</p>
+                    <img src="src/kendari_da7b9e2a97c511865421defb7bfad93a-720x405.png" class="w-full h-64 md:h-80 object-cover" alt="">
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xl md:text-2xl font-semibold">WiFi Corner Publik</h3>
+                        <p class="text-sm md:text-base text-gray-400 mt-1">Konten promosi WiFi publik</p>
                     </div>
                 </div>
 
                 <div class="project-card bg-zinc-900 rounded-3xl overflow-hidden">
-                    <img src="src/Screenshot_20260515_125608_Instagram.jpg" class="w-full h-80 object-cover" alt="">
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold">Beasiswa Gubernur Sultra</h3>
-                        <p class="text-gray-400">Konten program beasiswa</p>
+                    <img src="src/Screenshot_20260515_125608_Instagram.jpg" class="w-full h-64 md:h-80 object-cover" alt="">
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xl md:text-2xl font-semibold">Beasiswa Gubernur Sultra</h3>
+                        <p class="text-sm md:text-base text-gray-400 mt-1">Konten program beasiswa</p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="py-24 border-t border-white/10">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <div class="text-emerald-400 text-sm tracking-widest">02 / SKILLS</div>
-                <h2 class="heading text-6xl">Alat & Keahlian</h2>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="skill-card bg-zinc-900 rounded-3xl overflow-hidden text-center hover:bg-zinc-800 transition-colors duration-300">
-                    <div class="h-48 bg-zinc-800/50 flex items-center justify-center text-6xl">💻</div>
-                    <div class="p-6"><h3 class="text-xl font-semibold">Frontend & Backend</h3></div>
-                </div>
-                <div class="skill-card bg-zinc-900 rounded-3xl overflow-hidden text-center hover:bg-zinc-800 transition-colors duration-300">
-                    <div class="h-48 bg-zinc-800/50 flex items-center justify-center text-6xl">🎥</div>
-                    <div class="p-6"><h3 class="text-xl font-semibold">Editor Video & Foto</h3></div>
-                </div>
-                <div class="skill-card bg-zinc-900 rounded-3xl overflow-hidden text-center hover:bg-zinc-800 transition-colors duration-300">
-                    <div class="h-48 bg-zinc-800/50 flex items-center justify-center text-6xl">📸</div>
-                    <div class="p-6"><h3 class="text-xl font-semibold">Fotografi</h3></div>
-                </div>
-                <div class="skill-card bg-zinc-900 rounded-3xl overflow-hidden text-center hover:bg-zinc-800 transition-colors duration-300">
-                    <div class="h-48 bg-zinc-800/50 flex items-center justify-center text-6xl">🎬</div>
-                    <div class="p-6"><h3 class="text-xl font-semibold">Videografi</h3></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 bg-zinc-950 border-t border-white/10">
+    <!-- SKILLS -->
+    <section id="skills" class="py-20 md:py-24 border-t border-white/10">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-12 gap-16">
-                <div class="md:col-span-5">
-                    <div class="text-emerald-400 text-sm tracking-widest mb-3">03 / CONTACT</div>
-                    <h2 class="heading text-6xl leading-none">Mari buat<br>sesuatu yang<br>hebat<span class="text-emerald-400">.</span></h2>
+            <div class="text-center mb-12 md:mb-16">
+                <div class="text-emerald-400 text-xs md:text-sm tracking-widest mb-2">02 / SKILLS</div>
+                <h2 class="heading text-4xl md:text-6xl">Alat & Keahlian</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <div class="skill-card bg-zinc-900 rounded-3xl overflow-hidden text-center hover:bg-zinc-800 transition-colors duration-300">
+                    <div class="h-40 md:h-48 bg-zinc-800/50 flex items-center justify-center text-5xl md:text-6xl">💻</div>
+                    <div class="p-6"><h3 class="text-lg md:text-xl font-semibold">Frontend & Backend</h3></div>
+                </div>
+                <div class="skill-card bg-zinc-900 rounded-3xl overflow-hidden text-center hover:bg-zinc-800 transition-colors duration-300">
+                    <div class="h-40 md:h-48 bg-zinc-800/50 flex items-center justify-center text-5xl md:text-6xl">🎥</div>
+                    <div class="p-6"><h3 class="text-lg md:text-xl font-semibold">Editor Video & Foto</h3></div>
+                </div>
+                <div class="skill-card bg-zinc-900 rounded-3xl overflow-hidden text-center hover:bg-zinc-800 transition-colors duration-300">
+                    <div class="h-40 md:h-48 bg-zinc-800/50 flex items-center justify-center text-5xl md:text-6xl">📸</div>
+                    <div class="p-6"><h3 class="text-lg md:text-xl font-semibold">Fotografi</h3></div>
+                </div>
+                <div class="skill-card bg-zinc-900 rounded-3xl overflow-hidden text-center hover:bg-zinc-800 transition-colors duration-300">
+                    <div class="h-40 md:h-48 bg-zinc-800/50 flex items-center justify-center text-5xl md:text-6xl">🎬</div>
+                    <div class="p-6"><h3 class="text-lg md:text-xl font-semibold">Videografi</h3></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 md:py-24 bg-zinc-950 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-16">
+                <div class="lg:col-span-5">
+                    <div class="text-emerald-400 text-xs md:text-sm tracking-widest mb-2 md:mb-3">03 / CONTACT</div>
+                    <h2 class="heading text-4xl md:text-6xl leading-none">Mari buat<br>sesuatu yang<br>hebat<span class="text-emerald-400">.</span></h2>
                     
-                    <div class="space-y-8 mt-12">
+                    <div class="space-y-6 md:space-y-8 mt-8 md:mt-12 flex flex-col sm:flex-row lg:flex-col gap-4 sm:gap-12 lg:gap-0">
                         <div>
                             <div class="text-xs text-gray-400">EMAIL</div>
-                            <a href="mailto:yakxanul@gmail.com" class="text-lg hover:text-emerald-400 transition-colors">yakxanul@gmail.com</a>
+                            <a href="mailto:yakxanul@gmail.com" class="text-base md:text-lg hover:text-emerald-400 transition-colors break-all">yakxanul@gmail.com</a>
                         </div>
                         <div>
                             <div class="text-xs text-gray-400">GITHUB</div>
-                            <a href="https://github.com/yakxan" target="_blank" class="text-lg hover:text-emerald-400 transition-colors">github.com/yakxan</a>
+                            <a href="https://github.com/yakxan" target="_blank" class="text-base md:text-lg hover:text-emerald-400 transition-colors">github.com/yakxan</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="md:col-span-7">
-                    <div class="bg-zinc-900 rounded-3xl p-10">
-                        <form action="https://formspree.io/f/mqevvdzz" method="POST" class="space-y-8">
+                <div class="lg:col-span-7">
+                    <div class="bg-zinc-900 rounded-3xl p-6 md:p-10">
+                        <form action="https://formspree.io/f/mqevvdzz" method="POST" class="space-y-6 md:space-y-8">
                             <div>
                                 <label class="block text-xs text-gray-400 mb-2">NAMA</label>
-                                <input name="name" type="text" required class="w-full bg-transparent border-b border-white/30 py-4 focus:border-emerald-400 outline-none text-lg transition-colors">
+                                <input name="name" type="text" required class="w-full bg-transparent border-b border-white/30 py-3 md:py-4 focus:border-emerald-400 outline-none text-base md:text-lg transition-colors">
                             </div>
                             <div>
                                 <label class="block text-xs text-gray-400 mb-2">SUBJECT</label>
-                                <input name="subject" type="text" required class="w-full bg-transparent border-b border-white/30 py-4 focus:border-emerald-400 outline-none text-lg transition-colors">
+                                <input name="subject" type="text" required class="w-full bg-transparent border-b border-white/30 py-3 md:py-4 focus:border-emerald-400 outline-none text-base md:text-lg transition-colors">
                             </div>
                             <div>
                                 <label class="block text-xs text-gray-400 mb-2">PESAN</label>
-                                <textarea name="message" rows="6" required class="w-full bg-transparent border-b border-white/30 py-4 focus:border-emerald-400 outline-none text-lg resize-none transition-colors"></textarea>
+                                <textarea name="message" rows="5" required class="w-full bg-transparent border-b border-white/30 py-3 md:py-4 focus:border-emerald-400 outline-none text-base md:text-lg resize-none transition-colors"></textarea>
                             </div>
-                            <button type="submit" class="w-full py-6 bg-white text-black font-semibold rounded-2xl hover:bg-emerald-400 transition-all active:scale-95 text-lg">
+                            <button type="submit" class="w-full py-4 md:py-6 bg-white text-black font-semibold rounded-2xl hover:bg-emerald-400 transition-all active:scale-95 text-base md:text-lg">
                                 KIRIM PESAN
                             </button>
                         </form>
@@ -185,7 +192,7 @@
         </div>
     </section>
 
-    <footer class="py-12 text-center text-xs text-gray-500 border-t border-white/10">
+    <footer class="py-8 md:py-12 text-center text-xs text-gray-500 border-t border-white/10">
         © 2026 Yachsanul Faizin • Kendari, Sulawesi Tenggara
     </footer>
 </body>
